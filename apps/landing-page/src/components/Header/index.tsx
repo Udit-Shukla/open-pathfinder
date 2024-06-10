@@ -35,6 +35,9 @@ const Header = () => {
         }
     };
 
+    const domainApp = process.env.DOMAIN_APP!;
+    console.log(domainApp)
+
     return (
         <>
             <header
@@ -140,10 +143,12 @@ const Header = () => {
                             </div>
                             <div className="flex items-center justify-end pr-16 lg:pr-0">
                                 <Link
-                                    href="/schedule-a-call"
-                                    className="ease-in-up hidden rounded-md bg-primary-2 py-3 text-base font-bold text-white transition duration-300 hover:bg-opacity-90 hover:shadow-signUp md:block md:px-6 lg:px-6 xl:px-6"
+                                    href="https://www.openpathfinder-application.vercel.app/login"
+                                    target="_blank"
+                                    legacyBehavior
                                 >
-                                    Login Now
+                                    <a className="ease-in-up hidden rounded-md bg-primary-2 py-3 text-base font-bold text-white transition duration-300 hover:bg-opacity-90 hover:shadow-signUp md:block md:px-6 lg:px-6 xl:px-6"
+                                    target="_blank">Login Now</a>
                                 </Link>
                                 <div>
                                     <ThemeToggler />
